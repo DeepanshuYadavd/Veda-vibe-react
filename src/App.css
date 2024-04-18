@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+.utube-slider{
+  animation: slidemove 20s linear infinite;
+}
+@keyframes slidemove {
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(calc(-250px * 8));
+  }
+}
+.utube-slide {
+  /* border: 2px solid rgb(35, 11, 185); */
+  border-radius: 2rem;
+  flex-basis: 20rem;
+  overflow: hidden;
+  box-shadow: 0px 0px 7px black;
+  /* padding: 0.5rem; */
+  object-fit: cover;
+  transition: 0.5s;
+  cursor: grab;
+}
+.utube-slide iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.utube-slider:hover {
+  animation-play-state: paused;
+}
+
+.utube-slide:hover {
+  transform: scale(1.1);
+}
